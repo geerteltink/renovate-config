@@ -31,7 +31,7 @@
     ]
   },
   "commitBodyTable": true,
-  "rangeStrategy": "replace",
+  "rangeStrategy": "bump",
   "rollbackPrs": true,
   "platformAutomerge": true,
   "packageRules": [
