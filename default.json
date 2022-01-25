@@ -1,0 +1,49 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Default renovate configuration",
+  "extends": [
+    "config:base",
+    "group:allNonMajor",
+    ":automergeMinor",
+    ":automergePr",
+    ":automergeBranch",
+    ":combinePatchMinorReleases",
+    ":enableVulnerabilityAlertsWithLabel(security)",
+    ":label(dependencies)",
+    ":gitSignOff",
+    ":prNotPending",
+    ":rebaseStalePrs",
+    ":semanticCommits",
+    ":separateMajorReleases",
+    ":timezone(UTC)"
+  ],
+  "enabledManagers": [
+    "composer",
+    "docker-compose",
+    "dockerfile",
+    "github-actions",
+    "npm"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "extends": [
+      "schedule:daily"
+    ]
+  },
+  "commitBodyTable": true,
+  "rangeStrategy": "replace",
+  "rollbackPrs": true,
+  "platformAutomerge": true,
+  "packageRules": [
+    {
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "enabled": false
+    }
+  ]
+}
