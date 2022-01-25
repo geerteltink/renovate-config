@@ -12,7 +12,7 @@ Create a `renovate.json` file in your repository, with the following content:
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>geerteltink/.github:renovate-config"
+    "github>geerteltink/renovate-config"
   ]
 }
 ```
